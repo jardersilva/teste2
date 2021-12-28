@@ -16,6 +16,12 @@ Sentry.init({ dsn: process.env.SENTRY_DSN });
 
 const app = express();
 
+app.use(
+  cors({
+    credentials: false,
+    origin: '*'
+  })
+);
 app.use(cookieParser());
 app.use(express.json());
 app.use(Sentry.Handlers.requestHandler());
