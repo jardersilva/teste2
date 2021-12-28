@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "u464273750_pj_teste",
+    "password": "@0G]gx|Kq",
+    "database": "u464273750_pj_teste",
+    "host": "jardersilva.com.br",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "u464273750_pj_teste",
+    "password": "@0G]gx|Kq",
+    "database": "u464273750_pj_teste",
+    "host": "jardersilva.com.br",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "u464273750_pj_teste",
+    "password": "@0G]gx|Kq",
+    "database": "u464273750_pj_teste",
+    "host": "jardersilva.com.br",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
