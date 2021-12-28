@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "16.5.x"
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "start": "node src/server.ts",
+    "start": "nodemon dist/server.js",
     "dev": "nodemon src/server.ts",
     "dev:server": "ts-node-dev --respawn --transpile-only --ignore node_modules src/server.ts",
     "pretest": "NODE_ENV=test sequelize db:migrate && NODE_ENV=test sequelize db:seed:all",
