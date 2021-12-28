@@ -6,7 +6,12 @@ import { logger } from "../utils/logger";
 let io: SocketIO;
 
 export const initIO = (httpServer: Server): SocketIO => {
-  io = new SocketIO(httpServer);
+  io = new SocketIO(httpServer, {
+    cors: {
+      origin: "*",
+      methods: ["GET", "POST"]
+    }
+  });
 
   io.on("connection", socket => {
     logger.info("Client Connected");
