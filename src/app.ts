@@ -11,11 +11,17 @@ import uploadConfig from "./config/upload";
 import AppError from "./errors/AppError";
 import routes from "./routes";
 import { logger } from "./utils/logger";
+import { initIO } from "./libs/socket";
 
 Sentry.init({ dsn: process.env.SENTRY_DSN });
 
 const app = express();
 const server = require('http').Server(app);
+
+const io = initIO(server);
+
+//app.use(io);
+
 app.use(cors());
 
 app.use(cookieParser());
